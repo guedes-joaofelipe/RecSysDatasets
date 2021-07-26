@@ -43,7 +43,7 @@ python run.py --dataset steam --input_path steam-data --output_path output_data/
 
 `output_path` is the path to store converted atomic files.
 
-`dupliacte_removal` There may be multiple interaction records for the same user-item pair. Add `--dupliacte_removal` can 
+`duplicate_removal` There may be multiple interaction records for the same user-item pair. Add `--duplicate_removal` can 
  keep only the most recent interaction between user and item and 
  record the number of interactions between the user and the item. 
  If you do not want to do this, please ignore this parameter.

@@ -49,7 +49,7 @@ class ML100KDataset(BaseDataset):
         return pd.read_csv(self.inter_file, delimiter=self.inter_sep, header=None, engine='python')
 
     def load_item_data(self):
-        origin_data = pd.read_csv(self.item_file, delimiter=self.item_sep, header=None, engine='python')
+        origin_data = pd.read_csv(self.item_file, delimiter=self.item_sep, header=None, engine='python', encoding = "ISO-8859-1")
         processed_data = origin_data.iloc[:, 0:4]
         release_year = []
         all_type = ['unkown', 'Action', 'Adventure', 'Animation',
@@ -113,7 +113,7 @@ class ML1MDataset(BaseDataset):
         return pd.read_csv(self.inter_file, delimiter=self.sep, header=None, engine='python')
 
     def load_item_data(self):
-        origin_data = pd.read_csv(self.item_file, delimiter=self.sep, header=None, engine='python')
+        origin_data = pd.read_csv(self.item_file, delimiter=self.sep, header=None, engine='python', encoding = "ISO-8859-1")
         processed_data = origin_data
         release_year = []
         for i in range(origin_data.shape[0]):
@@ -166,7 +166,7 @@ class ML10MDataset(BaseDataset):
         return pd.read_csv(self.inter_file, delimiter=self.sep, header=None, engine='python')
 
     def load_item_data(self):
-        origin_data = pd.read_csv(self.item_file, delimiter=self.sep, header=None, engine='python')
+        origin_data = pd.read_csv(self.item_file, delimiter=self.sep, header=None, engine='python', encoding = "ISO-8859-1")
         processed_data = origin_data
         release_year = []
         for i in range(origin_data.shape[0]):
@@ -216,7 +216,7 @@ class ML20MDataset(BaseDataset):
         return pd.read_csv(self.inter_file, delimiter=self.sep, engine='python')
 
     def load_item_data(self):
-        origin_data = pd.read_csv(self.item_file, delimiter=self.sep, engine='python')
+        origin_data = pd.read_csv(self.item_file, delimiter=self.sep, engine='python', encoding = "ISO-8859-1")
         processed_data = origin_data
         release_year = []
         for i in range(origin_data.shape[0]):
